@@ -1,0 +1,91 @@
+.home_container {
+    display: flex;
+    align-items: center;
+    background: url(../img/homewallpaper.svg);
+    flex-grow: 2;
+    flex-wrap: wrap;
+    height: 832px;
+    width: 200px;
+    
+}
+
+ .home_image {
+    display: flex;
+    align-items: center;
+    height: 800px;
+    background: linear-gradient(90deg, #000000 0%, #000000 35.42%, rgba(19, 19, 19, 0) 100%), url(../img/homewallpaper.svg);
+    background-repeat: repeat;
+    background-blend-mode: darken;    
+} 
+
+.search_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 380px;
+    background-color: var(--red-main);
+    color: white;
+    gap: 30px;
+    padding-left: 100px;
+    padding-right: 50px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.search_title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+.search_text {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+button {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    width: 300px;
+    height: 60px;
+    font-size: 22px;
+    border-radius: 18px;
+    background-color: #0000;
+    border-color: white;
+    border-width: 3px;
+    color: white;
+}
+
+.cards_famous {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100vw;
+    padding: 20px;
+}
+
+.title__famous {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.img__famous {
+    width: 54px;
+}
+
+.text__title {
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.title__line {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    background-color: brown;
+}

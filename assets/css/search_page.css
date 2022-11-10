@@ -1,0 +1,37 @@
+main {
+    height: 76vh;
+    padding-top: 62px;
+    padding-bottom: 62px;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+#hero {
+    height: 66px;
+    width: 100%;
+    padding-left: 60px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+}
+
+.title_container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 92px;
+}
+
+.title_image {
+    width: 60px;
+}
+
+.title_text {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+}
+
+#show_container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}

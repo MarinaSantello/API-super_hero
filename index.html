@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ac5338e93e.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/card-home.js" defer type="module"></script>
+    <link rel = "shortcut icon" type = "imagem/x-icon" href = "./assets/img/superhero-window.png"/>
+    <title>Super Heroes</title>
+</head>
+<body>
+    <header>
+        <div class="logo_container">
+            <img src="./assets/img/superhero.png" alt="" class="logo_icon">
+            <span class="logo_text">HEROES</span>
+        </div>
+    </header>
+    <main>       
+        <div class="home_image">
+            <div class="search_container">
+                <span class="search_title">Search for your favorite super heroes!</span>
+                <p class="search_text">Consult our api and get to know your favorite characters better.</p>
+                
+                <a href="./pages/search_page.html">
+                    <button>Search</button>
+                </a>
+            </div>                
+        </div>
+
+        <div class="title__famous">
+            <img src="./assets/img/eye-mask_home.png" alt="" class="img__famous">
+            <span class="text__title">most searched characters</span>
+        </div>
+        <div class="title__line"></div>
+
+        <div class="cards_famous">
+            <card-famous-character id="644" class="famous_character" alignment="good" name="Superman" fullname="Clark Kent" placeofbirth="Krypton" publisher="DC Comics" firstappearance="ACTION COMICS #1" groupaffiliation="Justice League of America, The Legion of Super-Heroes (pre-Crisis as Superboy); Justice Society of America (pre-Crisis Earth-2 version); All-Star Squadron (pre-Crisis Earth-2 version)" icon="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/644-superman.jpg"></card-famous-character>
+            <card-famous-character id="346" class="famous_character" alignment="good" name="Iron Man" fullname="Tony Stark" placeofbirth="Long Island, New York" publisher="Marvel Comics" firstappearance="Tales of Suspence #39 (March, 1963)" groupaffiliation="Avengers, Illuminati, Stark Resilient; formerly S.H.I.E.L.D., leader of Stark Enterprises, the Pro-Registration Superhero Unit, New Avengers, Mighty Avengers, Hellfire Club, Force Works, Avengers West Coast, United States Department of Defense." icon="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/346-iron-man.jpg"></card-famous-character>
+            <card-famous-character id="70" class="famous_character" alignment="good" name="Batman" fullname="Bruce Wayne" placeofbirth="Crest Hill, Bristol Township; Gotham County" publisher="DC Comics" firstAppearance="Detective Comics #27" groupAffiliation="Batman Family, Batman Incorporated, Justice League, Outsiders, Wayne Enterprises, Club of Heroes, formerly White Lantern Corps, Sinestro Corps" icon="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/70-batman.jpg"></card-famous-character>
+            <card-famous-character id="332" class="famous_character" alignment="good" name="Hulk" fullname="Bruce Banner" placeofbirth="Dayton, Ohio" publisher="Marvel Comics" firstappearance="Incredible Hulk #1 (May, 1962)" groupaffiliation="Defenders, former leader of the new Hulkbusters, member of the Avengers, Pantheon, Titans Three, the Order, Hulkbusters of Counter-Earth-Franklin, alternate Fantastic Four" icon="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/332-hulk.jpg"></card-famous-character>
+            <card-famous-character id="720" class="famous_character" alignment="good" name="Wonder Woman" fullname="Diana Prince" placeofbirth="Themyscira" publisher="DC Comics" firstappearance="All-Star Comics #8 (December, 1941)" groupaffiliation="Justice League of America, Justice Society of America (pre-Crisis Earth-2 version); All-Star Squadron (pre-Crisis Earth-2 version)" icon="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/720-wonder-woman.jpg"></card-famous-character>
+            <card-famous-character id="149" class="famous_character" alignment="good" name="Captain America" fullname="Steve Rogers" placeofbirth="Manhattan, New York City, New York" publisher="Marvel Comics" firstappearance="Marvel Comics" groupaffiliation="Adventurer, federal official, intelligence operative; former soldier, Hydra agent, liaison between S.H.I.E.L.D. and the Avengers, police officer, teacher, sparring partner." icon="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/149-captain-america.jpg"></card-famous-character>
+            <card-famous-character id="579" class="famous_character" alignment="bad" name="Scarlet Witch" fullname="Wanda Maximoff" placeofbirth="Wundagore Mountain, Transia" publisher="Marvel Comics" firstappearance="Uncanny X-Men #4 (March, 1964)" groupaffiliation="None, Formerly Avengers, Avengers West Coast, Force Works, Queen's Vengeance, Secret Defenders, Lady Liberators, Brotherhood of Evil Mutants" icon="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/lg/579-scarlet-witch.jpg"></card-famous-character>
+            <card-famous-character id="620" class="famous_character" alignment="good" name="Spider-Man" fullname="Peter Parker" placeofbirth="New York, New York" publisher="Marvel Comics" firstappearance="Amazing Fantasy #15" groupaffiliation="Member of the Avengers, formerly member of Outlaws, alternate Fantastic Four" icon="https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/620-spider-man.jpg"></card-famous-character>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="logo_container">
+            <img src="./assets/img/superhero.png" alt="" class="logo_icon">
+            <span class="logo_text">HEROES</span>
+        </div>
+        <div class="copyright_container">
+            <p class="copyright_itens">PRIVACY POLICY | MENAGE PREFERENCES | ACCESSIBILY</p>
+            <span class="copyright_text">© 2022 HEROES</span>
+        </div>
+        <div class="social_container">
+            <span class="social_text">FOLLOW HEROES:</span>
+            <div class="social_itens">
+                <a href="#" class="social_item">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="social_item">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#" class="social_item">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#" class="social_item">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#" class="social_item">
+                    <i class="fa-brands fa-square-snapchat"></i>
+                </a>
+                <a href="#" class="social_item">
+                    <i class="fa-brands fa-pinterest"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
