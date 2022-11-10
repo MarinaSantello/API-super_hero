@@ -62,10 +62,11 @@ class container extends HTMLElement {
 
         style.textContent = `
 
-        
+
         .character__container {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             gap: 24px;
             height: 78vh;
         }
@@ -75,11 +76,8 @@ class container extends HTMLElement {
             text-transform: uppercase;
             color: ${main};
             text-decoration: underline;
-            font-size: 3.3rem;
-            height: 50vh;
+            font-size: 5rem;
             padding-left: 5vw;
-            height: auto;
-            background-color: tomato;
         }
         .${this.name}__data {
             display: flex;
