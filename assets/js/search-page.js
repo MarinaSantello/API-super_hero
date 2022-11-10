@@ -75,7 +75,7 @@ class card extends HTMLElement {
             }
 
             .card_container:hover {
-                background-image: linear-gradient(${dark}, #ffff);
+                background-image: linear-gradient(${dark}, #fff0);
             }
 
             .hero_image {

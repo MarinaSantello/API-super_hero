@@ -62,6 +62,25 @@ class container extends HTMLElement {
 
         style.textContent = `
 
+        
+        .character__container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            height: 78vh;
+        }
+
+        .title__name {
+            font-family: 'Bayon', sans-serif;
+            text-transform: uppercase;
+            color: ${main};
+            text-decoration: underline;
+            font-size: 3.3rem;
+            height: 50vh;
+            padding-left: 5vw;
+            height: auto;
+            background-color: tomato;
+        }
         .${this.name}__data {
             display: flex;
             width: 100vw;
@@ -78,7 +97,13 @@ class container extends HTMLElement {
         }
 
         .title__powers {
+            display: flex;
+            font-family: 'Bayon', sans-serif;
+            text-transform: uppercase;
             color: ${main};
+            text-decoration: underline;
+            font-size: 3rem;
+            justify-content: center;
         }
 
         .powers__container {
@@ -103,53 +128,58 @@ class container extends HTMLElement {
 
         .power {
             width: 10vw;
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-size: 1.5rem;
         }
 
         .background__bar {
             display: flex;
             width: 80%;
-            height: 20px;
+            height: 24px;
             background-color: rgba(38, 38, 38, 0.2);
         }
 
-        .power__intelligence {
+        .power__intelligence,
+        .power__strength,
+        .power__speed,
+        .power__durability,
+        .power__power,
+        .power__combat {
             display: flex;
             justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            font-family: 'Bebas Neue', cursive;
+            padding-right: 10px;
+            font-size: 1.2rem;
+            font-weight: lighter;
+        }
+        .power__intelligence {
             width: ${this.intelligence}%;
             background-color: ${main};
         }
 
         .power__strength {
-            display: flex;
-            justify-content: flex-end;
             width: ${this.strength}%;
             background-color: ${main};
         }
 
         .power__speed {
-            display: flex;
-            justify-content: flex-end;
             width: ${this.speed}%;
             background-color: ${main};
         }
 
         .power__durability {
-            display: flex;
-            justify-content: flex-end;
             width: ${this.durability}%;
             background-color: ${main};
         }
 
         .power__power {
-            display: flex;
-            justify-content: flex-end;
             width: ${this.power}%;
             background-color: ${main};
         }
 
         .power__combat {
-            display: flex;
-            justify-content: flex-end;
             width: ${this.combat}%;
             background-color: ${main};
         }
@@ -157,6 +187,15 @@ class container extends HTMLElement {
         .biography__container {
             display: flex;
             flex-direction: column;
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-weight: 500;
+            align-items: center;
+            font-size: 1.3rem;
+        }
+
+        .biography__topics{
+            display: flex;
+            gap: 15px;
         }
             
         `
@@ -168,83 +207,88 @@ class container extends HTMLElement {
         const containerCharacter = document.createElement('div');
         containerCharacter.classList.add('container-character');
         containerCharacter.innerHTML = `
-        <span class="title__name">${this.name}</span>
+        <div class="character__container">
+            <span class="title__name">${this.name}</span>
 
-        <div class="${this.name}__data">
-            <div class="card__img"></div>
+            <div class="${this.name}__data">
+                <div class="card__img"></div>
 
-            <div class="powers__container">
-                <span class"title__powers">power stats</span>
+                <div class="powers__container">
+                    <span class="title__powers">power stats</span>
 
-                <div class="power__stats">
-                    
-                    <div class="data__power">
-                        <span class="power">Intelligence</span>
+                    <div class="power__stats">
+                        
+                        <div class="data__power">
+                            <span class="power">Intelligence</span>
 
-                        <div class="background__bar">
-                            <div class="power__intelligence">
-                                ${this.intelligence}%
+                            <div class="background__bar">
+                                <div class="power__intelligence">
+                                    ${this.intelligence}%
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="data__power">
-                        <span class="power">Strength</span>
+                        <div class="data__power">
+                            <span class="power">Strength</span>
 
-                        <div class="background__bar">
-                            <div class="power__strength">
-                                ${this.strength}%
+                            <div class="background__bar">
+                                <div class="power__strength">
+                                    ${this.strength}%
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="data__power">
-                        <span class="power">Speed</span>
+                        <div class="data__power">
+                            <span class="power">Speed</span>
 
-                        <div class="background__bar">
-                            <div class="power__speed">
-                                ${this.speed}%
+                            <div class="background__bar">
+                                <div class="power__speed">
+                                    ${this.speed}%
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="data__power">
-                        <span class="power">Durability</span>
+                        <div class="data__power">
+                            <span class="power">Durability</span>
 
-                        <div class="background__bar">
-                            <div class="power__durability">
-                                ${this.durability}%
+                            <div class="background__bar">
+                                <div class="power__durability">
+                                    ${this.durability}%
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="data__power">
-                        <span class="power">Power</span>
+                        <div class="data__power">
+                            <span class="power">Power</span>
 
-                        <div class="background__bar">
-                            <div class="power__power">
-                                ${this.power}%
+                            <div class="background__bar">
+                                <div class="power__power">
+                                    ${this.power}%
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="data__power">
-                        <span class="power">Combat</span>
+                        <div class="data__power">
+                            <span class="power">Combat</span>
 
-                        <div class="background__bar">
-                            <div class="power__combat">
-                                ${this.combat}%
+                            <div class="background__bar">
+                                <div class="power__combat">
+                                    ${this.combat}%
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="biography__container">
-            <span>${this.race} - ${this.gender} - ${this.publisher} - ${this.firstappearance}</span>
-            <span>${this.groupaffiliation}</span>
-        </div>
+            <div class="biography__container">
+                <div class="biography__topics">
+                    <span>${this.race}</span> <span>&#8226;</span> <span>${this.gender}</span> <span>&#8226;</span> <span>${this.publisher}</span> <span>&#8226;</span> <span>${this.firstappearance}</span>
+                </div>
+
+                <span>${this.groupaffiliation}</span>
+            </div>
+        <div>
 
         `
 
