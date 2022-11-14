@@ -62,7 +62,6 @@ class container extends HTMLElement {
 
         style.textContent = `
 
-
         .character__container {
             display: flex;
             flex-direction: column;
@@ -79,9 +78,10 @@ class container extends HTMLElement {
             font-size: 5rem;
             padding-left: 5vw;
         }
+
         .${this.name}__data {
             display: flex;
-            width: 100vw;
+            width: 100%;
             justify-content: space-between;
             background-color: 'tomato';
         }
@@ -89,9 +89,12 @@ class container extends HTMLElement {
         .card__img {
             width: 20%;
             height: 402px;
+            margin-left: 42px;
             background-image: url(${this.icon});
             background-size: cover;
             background-repeat: no-repeat;
+            border-radius: 0px 32px 32px 32px;
+            box-shadow: inset 0px 0px 8px 10px ${dark};
         }
 
         .title__powers {
@@ -111,6 +114,8 @@ class container extends HTMLElement {
             justify-content: space-around;
             padding: 32px;
             background-color: #fff;
+            border-radius: 24px 0 0 24px;
+            box-shadow: inset 10px 0px 0px 2.5px ${dark};
         }
 
         .power__stats {
@@ -152,39 +157,52 @@ class container extends HTMLElement {
             font-size: 1.2rem;
             font-weight: lighter;
         }
+
         .power__intelligence {
             width: ${this.intelligence}%;
             background-color: ${main};
+            animation: bar-animacao 1s;
         }
 
         .power__strength {
             width: ${this.strength}%;
             background-color: ${main};
+            animation: bar-animacao 1s;
         }
 
         .power__speed {
             width: ${this.speed}%;
             background-color: ${main};
+            animation: bar-animacao 1s;
         }
 
         .power__durability {
             width: ${this.durability}%;
             background-color: ${main};
+            animation: bar-animacao 1s;
         }
 
         .power__power {
             width: ${this.power}%;
             background-color: ${main};
+            animation: bar-animacao 1s;
         }
 
         .power__combat {
             width: ${this.combat}%;
             background-color: ${main};
+            animation: bar-animacao 1s;
+        }
+
+        @keyframes bar-animacao {
+            0%   {top: 0px; height: 0%;}
+            100% {top: 200px;}
         }
 
         .biography__container {
             display: flex;
             flex-direction: column;
+            gap: 12px;
             font-family: 'PT Sans Narrow', sans-serif;
             font-weight: 500;
             align-items: center;
@@ -194,6 +212,12 @@ class container extends HTMLElement {
         .biography__topics{
             display: flex;
             gap: 15px;
+        }
+        
+        .groups{
+            display: flex;
+            text-align: center;
+            font-size: 1.2rem;
         }
             
         `
@@ -284,7 +308,7 @@ class container extends HTMLElement {
                     <span>${this.race}</span> <span>&#8226;</span> <span>${this.gender}</span> <span>&#8226;</span> <span>${this.publisher}</span> <span>&#8226;</span> <span>${this.firstappearance}</span>
                 </div>
 
-                <span>${this.groupaffiliation}</span>
+                <span class="groups">${this.groupaffiliation}</span>
             </div>
         <div>
 

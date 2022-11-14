@@ -4,12 +4,16 @@
     --red-light: #CD0C2B;
     --red-main: #A10220;
     --red-dark: #7A0213;
+    --red-opacity: #CD0C2Baa;
+    --red-light: #CD0C2B;
     --blue-main: #023F73;
     --blue-light: #034780;
     --blue-dark: #002B53;
+    --blue-opacity: #034780aa;
     --purple-light: #5a189a;
     --purple-main: #3c096c;
     --purple-dark: #240046;
+    --purple-opacity: #5a189aaa;
 }
 
 body{

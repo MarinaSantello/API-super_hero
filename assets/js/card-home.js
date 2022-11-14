@@ -56,28 +56,32 @@ class card extends HTMLElement {
         style.textContent = `
             .card {
                 background-color: #ffff;
-                width: 90vw;
                 height: auto;
                 display: flex;
                 align-items: center;
                 padding: 42px;
-
-                border-width: 12px; 
+                font-family: 'PT Sans Narrow', sans-serif;
+                border-width: 2px; 
                 border-style: solid;
                 border-color:  ${dark};
-                border-radius: 30px;
-            
+                border-radius: 0px 24px 24px 0px;
+                color: ${dark};            
             }
 
-            .card__nome, 
             .card__fullname, 
             .card__placeofbirth,
             .card__publisher,
             .card__firstappearance,
             .card__groupaffiliation {
-                font-weight:bold;
-                color: ${dark};
+                font-weight: lighter;
                 font-size: 1.3rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .card__nome {
+                font-weight: bold;
+                font-size: 2.3rem;
                 display: flex;
                 align-items: center;
             }
@@ -97,7 +101,10 @@ class card extends HTMLElement {
                 height: 402px;
                 background-image: url(${this.icon});
                 background-size: cover;
+                background-position: center;
                 background-repeat: no-repeat;
+                border-radius: 24px;
+                box-shadow: inset 0px 0px 0px 12px #fffa;
             }
 
             .a__information {
@@ -107,11 +114,20 @@ class card extends HTMLElement {
             }
 
             .more__info{
-                color: white;
+                color: ${main};
                 font-size: 1.3rem;
-                background-color: ${main};
                 border-radius: 100px;
-                padding: 10px;
+                border-width: 2px; 
+                border-style: solid;
+                border-color:  ${dark};
+                padding: 12px 24px 12px 24px;
+                transition: .2s;
+            }
+
+            .more__info:hover {
+                color: #fff;
+                background-color: ${main};
+                transition: .5s;
             }
         `
         

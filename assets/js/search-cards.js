@@ -46,11 +46,13 @@ const searchCards = async () => {
 
         const showContainer = document.getElementById('show_container')
         showContainer.textContent = ''
+        document.querySelector('main').style.height = '76vh';
 
     } else {
         const cards = await searchHeroes()
         console.log(cards)
         showCards(hero, cards)
+        document.querySelector('main').style.height = 'auto';
     }
 
 }
