@@ -98,11 +98,12 @@ button {
     }
 
     .search_container {
+        width: 100%;
         padding-left: 30px;
         padding-right: 30px;
         background: linear-gradient(0deg, #000000 0%, #000000 50%, #00000060 100%, rgba(19, 19, 19, 0) 100%), url(../img/homewallpaper.svg);
         background-size: contain;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         border-radius: 0px;
     }
 
