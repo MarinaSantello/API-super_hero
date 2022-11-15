@@ -1,14 +1,4 @@
-.home_container {
-    display: flex;
-    align-items: center;
-    background: url(../img/homewallpaper.svg);
-    flex-grow: 2;
-    flex-wrap: wrap;
-    height: 832px;
-    width: 200px;    
-}
-
- .home_image {
+.home_image {
     display: flex;
     align-items: center;
     height: 800px;
