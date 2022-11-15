@@ -61,165 +61,209 @@ class container extends HTMLElement {
         } 
 
         style.textContent = `
+            .character__container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 24px;
+                height: 78vh;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
 
-        .character__container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 24px;
-            height: 78vh;
-        }
+            .title__name {
+                font-family: 'Bayon', sans-serif;
+                text-transform: uppercase;
+                color: ${main};
+                text-decoration: underline;
+                font-size: 5rem;
+            }
 
-        .title__name {
-            font-family: 'Bayon', sans-serif;
-            text-transform: uppercase;
-            color: ${main};
-            text-decoration: underline;
-            font-size: 5rem;
-            padding-left: 5vw;
-        }
+            .${this.name}__data {
+                display: flex;
+                justify-content: space-between;
+            }
 
-        .${this.name}__data {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            background-color: 'tomato';
-        }
+            .card__img {
+                width: 300px;
+                height: 400px;
+                background-image: url(${this.icon});
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 0px 32px 32px 32px;
+                box-shadow: inset 0px 0px 8px 10px ${dark};
+            }
 
-        .card__img {
-            width: 20%;
-            height: 402px;
-            margin-left: 42px;
-            background-image: url(${this.icon});
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 0px 32px 32px 32px;
-            box-shadow: inset 0px 0px 8px 10px ${dark};
-        }
+            .title__powers {
+                display: flex;
+                font-family: 'Bayon', sans-serif;
+                text-transform: uppercase;
+                color: ${main};
+                text-decoration: underline;
+                font-size: 3rem;
+                justify-content: center;
+            }
 
-        .title__powers {
-            display: flex;
-            font-family: 'Bayon', sans-serif;
-            text-transform: uppercase;
-            color: ${main};
-            text-decoration: underline;
-            font-size: 3rem;
-            justify-content: center;
-        }
+            .powers__container {
+                display: flex;
+                flex-direction: column;
+                width: 70vw;
+                justify-content: space-around;
+                padding: 32px;
+                background-color: #fff;
+                border-radius: 24px 0 0 24px;
+                box-shadow: inset 10px 0px 0px 2.5px ${dark};
+            }
 
-        .powers__container {
-            display: flex;
-            flex-direction: column;
-            width: 70vw;
-            justify-content: space-around;
-            padding: 32px;
-            background-color: #fff;
-            border-radius: 24px 0 0 24px;
-            box-shadow: inset 10px 0px 0px 2.5px ${dark};
-        }
+            .power__stats {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
 
-        .power__stats {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+            .data__power {
+                display: flex;
+                gap: 24px;
+            }
 
-        .data__power {
-            display: flex;
-            gap: 24px;
-        }
+            .power {
+                width: 10vw;
+                font-family: 'PT Sans Narrow', sans-serif;
+                font-size: 1.5rem;
+            }
 
-        .power {
-            width: 10vw;
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-size: 1.5rem;
-        }
+            .background__bar {
+                display: flex;
+                width: 80%;
+                height: 24px;
+                background-color: rgba(38, 38, 38, 0.2);
+                border-radius: 20px;
+            }
 
-        .background__bar {
-            display: flex;
-            width: 80%;
-            height: 24px;
-            background-color: rgba(38, 38, 38, 0.2);
-        }
+            .power__intelligence,
+            .power__strength,
+            .power__speed,
+            .power__durability,
+            .power__power,
+            .power__combat {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                border-radius: 20px;
+            }
 
-        .power__intelligence,
-        .power__strength,
-        .power__speed,
-        .power__durability,
-        .power__power,
-        .power__combat {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            color: #fff;
-            font-family: 'Bebas Neue', cursive;
-            padding-right: 10px;
-            font-size: 1.2rem;
-            font-weight: lighter;
-        }
+            .power__intelligence {
+                width: ${this.intelligence}%;
+                background-color: ${main};
+                animation: bar-animacao 1s;
+            }
 
-        .power__intelligence {
-            width: ${this.intelligence}%;
-            background-color: ${main};
-            animation: bar-animacao 1s;
-        }
+            .power__strength {
+                width: ${this.strength}%;
+                background-color: ${main};
+                animation: bar-animacao 1s;
+            }
 
-        .power__strength {
-            width: ${this.strength}%;
-            background-color: ${main};
-            animation: bar-animacao 1s;
-        }
+            .power__speed {
+                width: ${this.speed}%;
+                background-color: ${main};
+                animation: bar-animacao 1s;
+            }
 
-        .power__speed {
-            width: ${this.speed}%;
-            background-color: ${main};
-            animation: bar-animacao 1s;
-        }
+            .power__durability {
+                width: ${this.durability}%;
+                background-color: ${main};
+                animation: bar-animacao 1s;
+            }
 
-        .power__durability {
-            width: ${this.durability}%;
-            background-color: ${main};
-            animation: bar-animacao 1s;
-        }
+            .power__power {
+                width: ${this.power}%;
+                background-color: ${main};
+                animation: bar-animacao 1s;
+            }
 
-        .power__power {
-            width: ${this.power}%;
-            background-color: ${main};
-            animation: bar-animacao 1s;
-        }
+            .power__combat {
+                width: ${this.combat}%;
+                background-color: ${main};
+                animation: bar-animacao 1s;
+            }
 
-        .power__combat {
-            width: ${this.combat}%;
-            background-color: ${main};
-            animation: bar-animacao 1s;
-        }
+            .attribute__number {
+                color: #fff;
+                font-family: 'Bebas Neue', cursive;
+                padding-right: 10px;
+                font-size: 1.2rem;
+                font-weight: lighter;
+            }
 
-        @keyframes bar-animacao {
-            0%   {top: 0px; height: 0%;}
-            100% {top: 200px;}
-        }
+            @keyframes bar-animacao {
+                0%   {top: 0px; height: 0%;}
+                100% {top: 200px;}
+            }
 
-        .biography__container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-weight: 500;
-            align-items: center;
-            font-size: 1.3rem;
-        }
+            .biography__container {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                font-family: 'PT Sans Narrow', sans-serif;
+                font-weight: 500;
+                align-items: center;
+                font-size: 1.3rem;
+            }
 
-        .biography__topics{
-            display: flex;
-            gap: 15px;
-        }
-        
-        .groups{
-            display: flex;
-            text-align: center;
-            font-size: 1.2rem;
-        }
+            .biography__topics{
+                display: flex;
+                gap: 15px;
+            }
             
+            .groups{
+                display: flex;
+                text-align: center;
+                font-size: 1.2rem;
+            }
+
+            @media (max-width: 768px) {
+                .character__container {
+                    height: 100%;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+
+                .${this.name}__data {
+                    flex-direction: column;
+                    align-itens: center;
+                    justify-content: center;
+                    gap: 50px;
+                }
+
+                .card__img {
+                    width: 100%;
+                    height: 450px;
+                }
+
+                .title__powers {
+                    justify-content: flex-start;
+                }
+
+                .powers__container {
+                    width: 100vw;
+                    gap: 50px;
+                }
+
+                .power__stats {
+                    gap: 24px;
+                }
+
+                .data__power {
+                    flex-direction: column;
+                    gap: 10px;
+                }   
+
+                .biography__container {
+                    font-size: 1rem;
+                    gap: 30px;
+                }
+            }
         `
         
         return style;
@@ -236,7 +280,7 @@ class container extends HTMLElement {
                 <div class="card__img"></div>
 
                 <div class="powers__container">
-                    <span class="title__powers">power stats</span>
+                    <span class="title__powers">POWER STATS</span>
 
                     <div class="power__stats">
                         
@@ -245,7 +289,7 @@ class container extends HTMLElement {
 
                             <div class="background__bar">
                                 <div class="power__intelligence">
-                                    ${this.intelligence}%
+                                    <h1 class="attribute__number">${this.intelligence}%</h1>
                                 </div>
                             </div>
                         </div>
@@ -255,7 +299,7 @@ class container extends HTMLElement {
 
                             <div class="background__bar">
                                 <div class="power__strength">
-                                    ${this.strength}%
+                                    <h1 class="attribute__number">${this.strength}%</h1>
                                 </div>
                             </div>
                         </div>
@@ -265,7 +309,7 @@ class container extends HTMLElement {
 
                             <div class="background__bar">
                                 <div class="power__speed">
-                                    ${this.speed}%
+                                    <h1 class="attribute__number">${this.speed}%</h1>
                                 </div>
                             </div>
                         </div>
@@ -275,7 +319,7 @@ class container extends HTMLElement {
 
                             <div class="background__bar">
                                 <div class="power__durability">
-                                    ${this.durability}%
+                                    <h1 class="attribute__number">${this.durability}%</h1>
                                 </div>
                             </div>
                         </div>
@@ -285,7 +329,7 @@ class container extends HTMLElement {
 
                             <div class="background__bar">
                                 <div class="power__power">
-                                    ${this.power}%
+                                    <h1 class="attribute__number">${this.power}%</h1>
                                 </div>
                             </div>
                         </div>
@@ -295,7 +339,7 @@ class container extends HTMLElement {
 
                             <div class="background__bar">
                                 <div class="power__combat">
-                                    ${this.combat}%
+                                    <h1 class="attribute__number">${this.combat}%</h1>
                                 </div>
                             </div>
                         </div>

@@ -129,6 +129,35 @@ class card extends HTMLElement {
                 background-color: ${main};
                 transition: .5s;
             }
+
+            @media (max-width: 768px) {
+                .card {
+                    padding: 22px;
+                    flex-direction: column;
+                }
+
+                .card__nome {
+                    font-size: 1.8rem
+                }
+
+                .info__topics {
+                    gap: 24px;
+                }
+
+                .card__img {
+                    width: 100%;
+                }
+
+                .card__groupaffiliation {
+                    padding-top: 16px;
+                }
+
+                .a__information {
+                    justify-content: center;
+                    padding-top: 50px;
+                }
+            
+            }
         `
         
         return style;

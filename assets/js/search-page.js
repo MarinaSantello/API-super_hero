@@ -111,6 +111,10 @@ class card extends HTMLElement {
                 color: ${dark};
                 height: 10vh;
             }
+
+            @media (max-width: 768px) {
+                
+            }
         `
         
         return style;
