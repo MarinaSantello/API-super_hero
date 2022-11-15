@@ -246,7 +246,7 @@ class container extends HTMLElement {
                 }
 
                 .powers__container {
-                    width: 100vw;
+                    width: 10o%;
                     gap: 50px;
                 }
 
