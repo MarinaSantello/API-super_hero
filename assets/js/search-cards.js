@@ -46,7 +46,7 @@ const searchCards = async () => {
 
         const showContainer = document.getElementById('show_container')
         showContainer.textContent = ''
-        document.querySelector('main').style.height = '76vh';
+        document.querySelector('main').style.height = '80vh';
 
     } else {
         const cards = await searchHeroes()

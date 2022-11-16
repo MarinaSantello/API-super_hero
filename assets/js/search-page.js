@@ -113,7 +113,13 @@ class card extends HTMLElement {
             }
 
             @media (max-width: 768px) {
-                
+                .card_container:hover .img_div {
+                    box-shadow: none;
+                }
+
+                .card_container:hover {
+                    background-image: none;
+                }
             }
         `
         

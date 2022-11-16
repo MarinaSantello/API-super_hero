@@ -1,5 +1,11 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 main {
-    height: 80vh;
+    min-height: 80vh;
     padding-top: 62px;
     padding-bottom: 62px;
     padding-left: 75px;

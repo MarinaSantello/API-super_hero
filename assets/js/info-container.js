@@ -67,8 +67,6 @@ class container extends HTMLElement {
                 justify-content: center;
                 gap: 24px;
                 height: 78vh;
-                padding-left: 50px;
-                padding-right: 50px;
             }
 
             .title__name {
@@ -77,11 +75,13 @@ class container extends HTMLElement {
                 color: ${main};
                 text-decoration: underline;
                 font-size: 5rem;
+                padding-left: 50px;
             }
 
             .${this.name}__data {
                 display: flex;
                 justify-content: space-between;
+                padding-left: 50px;
             }
 
             .card__img {
@@ -197,7 +197,7 @@ class container extends HTMLElement {
             }
 
             @keyframes bar-animacao {
-                0%   {top: 0px; height: 0%;}
+                0%   {top: 0px; width: 0%;}
                 100% {top: 200px;}
             }
 
@@ -229,16 +229,24 @@ class container extends HTMLElement {
                     padding-right: 20px;
                 }
 
+                .title__name {
+                    display: flex;
+                    justify-content: center;
+                    padding-left: 0px;
+                }
+
                 .${this.name}__data {
                     flex-direction: column;
                     align-itens: center;
                     justify-content: center;
                     gap: 50px;
+                    padding-left: 0px;
                 }
 
                 .card__img {
                     width: 100%;
                     height: 450px;
+                    border-radius: 22px;
                 }
 
                 .title__powers {
@@ -248,6 +256,7 @@ class container extends HTMLElement {
                 .powers__container {
                     width: 10o%;
                     gap: 50px;
+                    border-radius: 22px;
                 }
 
                 .power__stats {
